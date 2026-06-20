@@ -1,0 +1,14 @@
+class llmclient:
+    def __init__(self,modelname,apikey):
+        self.modelname = modelname
+        self.apikey = apikey
+    def generate(self,prompt):
+        return f"[{self.modelname}] response to: {prompt}"
+    
+client1 = llmclient("ollama","key1")
+client2 = llmclient("claude","key2")
+
+print(client1.generate("hi"))
+
+so in this example i know init is a speciaal method that is only acts as constructor which is only used to assign properties to objects and init mandatory has to be consisting self keyword is it correct?
+  also if wihtout init is the same thing possible that i am doing if yes then why init? 
